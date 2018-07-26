@@ -1,17 +1,24 @@
 package com.dhs.spring_boot_study;
 
 import com.dhs.spring_boot_starter_hello.HelloService;
+import com.dhs.spring_boot_study.Thymeleaf模板引擎.Person;
 import com.dhs.spring_boot_study.类型安全的配置.AuthorInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.List;
+
 // spring boot倡导零配置,但保留了通过@ImportResource来加载外部配置的接口。
 /*@ImportResource({"classpath:some-context.xml", "classpath:other-context.xml"})*/
-@RestController
+//@RestController
+@Controller
 // Spring Boot的核心注解，开启自动配置。会根据类路径下的jar依赖为当前项目进行自动配置。exclude参数用于关闭特定的自动配置。
 @SpringBootApplication(/*exclude = {DataSourceAutoConfiguration.class}*/)
 public class SpringBootStudyApplication {
@@ -30,10 +37,31 @@ public class SpringBootStudyApplication {
     @Autowired
     HelloService helloService;
 
-    @RequestMapping("/")
+   /* @RequestMapping("/")
     String index() {
         //return "book name is " + bookName + " and book author is " + bookAuthor + "<p> author name is " + authorInfo.getName() + " and author age is " + authorInfo.getAge();
         return helloService.sayHello();
+    }*/
+
+    /**
+     * 测试Thymeleaf模板引擎
+     *
+     * @param model
+     * @return
+     */
+    @RequestMapping("/")
+    public String index(Model model) {
+        Person single = new Person("aa", 11);
+        List<Person> people = new ArrayList<>();
+        Person person1 = new Person("xx", 11);
+        Person person2 = new Person("yy", 22);
+        Person person3 = new Person("zz", 33);
+        people.add(person1);
+        people.add(person2);
+        people.add(person3);
+        model.addAttribute("singlePerson", single);
+        model.addAttribute("people", people);
+        return "index";
     }
 
     /**
