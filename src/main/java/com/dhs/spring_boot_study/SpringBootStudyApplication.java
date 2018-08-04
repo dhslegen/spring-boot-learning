@@ -10,7 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,10 +43,7 @@ public class SpringBootStudyApplication {
     }*/
 
     /**
-     * 测试Thymeleaf模板引擎
-     *
-     * @param model
-     * @return
+     * 测试Thymeleaf模板引擎<p>
      */
     @RequestMapping("/")
     public String index(Model model) {
