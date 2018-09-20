@@ -14,9 +14,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.ArrayList;
 import java.util.List;
 
-// spring boot倡导零配置,但保留了通过@ImportResource来加载外部配置的接口。
-/*@ImportResource({"classpath:some-context.xml", "classpath:other-context.xml"})*/
-//@RestController
+/**
+ * spring boot倡导零配置,但保留了通过@ImportResource来加载外部配置的接口。
+ * <p>
+ * >>@ImportResource({"classpath:some-context.xml", "classpath:other-context.xml"})
+ */
+// @RestController
 @Controller
 // Spring Boot的核心注解，开启自动配置。会根据类路径下的jar依赖为当前项目进行自动配置。exclude参数用于关闭特定的自动配置。
 @SpringBootApplication(/*exclude = {DataSourceAutoConfiguration.class}*/)
@@ -64,6 +67,8 @@ public class SpringBootStudyApplication {
      * java程序的标准入口，spring boot 借此启动。
      * 1.自定义banner(启动的图案):在src/main/resource下新建banner.txt,并在http://patorjk.com/software/taag网站上生成。
      * 2.通过命令行修改服务器的端口:java -jar xx.jar --server.port=9090
+     * 3.替换Tomcat，如jetty和undertow通过修改pom.xml实现，具体为：在web依赖中通过spring-boot-starter-exclusion标签将spring-boot-starter-tomcat
+     * 排除掉，再添加spring-boot-starter-jetty或其他。
      *
      * @param args
      */
