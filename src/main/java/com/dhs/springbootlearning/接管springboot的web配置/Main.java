@@ -1,4 +1,4 @@
-package com.dhs.spring_boot_study.接管springboot的web配置;
+package com.dhs.springbootlearning.接管springboot的web配置;
 
 /**
  * 【重要】<p>

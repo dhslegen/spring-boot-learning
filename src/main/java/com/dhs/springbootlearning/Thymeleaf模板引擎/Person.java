@@ -1,4 +1,4 @@
-package com.dhs.spring_boot_study.Thymeleaf模板引擎;
+package com.dhs.springbootlearning.Thymeleaf模板引擎;
 
 public class Person {
     private String name;

@@ -1,4 +1,4 @@
-package com.dhs.spring_boot_study;
+package com.dhs.springbootlearning;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

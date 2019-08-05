@@ -1,4 +1,4 @@
-package com.dhs.spring_boot_study.类型安全的配置;
+package com.dhs.springbootlearning.类型安全的配置;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;

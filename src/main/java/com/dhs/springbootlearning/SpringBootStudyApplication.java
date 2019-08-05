@@ -1,8 +1,8 @@
-package com.dhs.spring_boot_study;
+package com.dhs.springbootlearning;
 
 import com.dhs.spring_boot_starter_hello.HelloService;
-import com.dhs.spring_boot_study.Thymeleaf模板引擎.Person;
-import com.dhs.spring_boot_study.类型安全的配置.AuthorInfo;
+import com.dhs.springbootlearning.Thymeleaf模板引擎.Person;
+import com.dhs.springbootlearning.类型安全的配置.AuthorInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;

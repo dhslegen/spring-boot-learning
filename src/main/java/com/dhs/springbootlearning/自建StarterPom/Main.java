@@ -1,4 +1,4 @@
-package com.dhs.spring_boot_study.自建StarterPom;
+package com.dhs.springbootlearning.自建StarterPom;
 
 import com.dhs.spring_boot_starter_hello.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;

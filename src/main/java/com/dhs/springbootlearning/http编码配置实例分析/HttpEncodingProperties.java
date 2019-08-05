@@ -1,4 +1,4 @@
-package com.dhs.spring_boot_study.http编码配置实例分析;
+package com.dhs.springbootlearning.http编码配置实例分析;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
